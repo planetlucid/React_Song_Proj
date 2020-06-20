@@ -1,0 +1,29 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  title: MyString
+  artist: MyString
+  album: MyString
+  image_url: MyString
+  genre: MyString
+  key: MyString
+  mode: MyString
+  sales: MyString
+  streams: MyString
+  bpm: 1.5
+  credits: MyString
+  structure: MyString
+
+two:
+  title: MyString
+  artist: MyString
+  album: MyString
+  image_url: MyString
+  genre: MyString
+  key: MyString
+  mode: MyString
+  sales: MyString
+  streams: MyString
+  bpm: 1.5
+  credits: MyString
+  structure: MyString
