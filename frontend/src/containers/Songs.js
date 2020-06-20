@@ -1,8 +1,9 @@
 import React from 'react'
 
-const Songs = () => (
+const Songs = (props) => (
 <div> 
-    <h3>Songs Component</h3>
+    <h1>Songs</h1>
+    {props.songs.map(song => <h1>{song.name}</h1>)}
 </div>
 );
 
