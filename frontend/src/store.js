@@ -4,10 +4,13 @@ import { createStore, applyMiddleware, combineReducers } from "redux";
 import thunk from "redux-thunk";
 
 import songs from './reducers/songs'
+import songFormData from './reducers/songFormData'
+
 
 // state
 const reducers = combineReducers({
-  songs
+  songs,
+  songFormData
 });
 const middleware = [thunk];
 
