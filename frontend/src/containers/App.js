@@ -5,14 +5,15 @@ import "./App.css";
 
 const API_URL = process.env.REACT_APP_API_URL
 
-class App extends Component {
-  constructor(props) {
-    super(props);
+  class App extends Component {
+  
+    constructor(props) {
+        super(props);
 
-    this.state = {
-      songs: [],
-    };
-  }
+        this.state = {
+        songs: []
+        }
+    }
 
   componentDidMount() {
     fetch(`${API_URL}/songs`)
