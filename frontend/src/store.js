@@ -4,7 +4,7 @@ import { createStore, applyMiddleware, combineReducers } from "redux";
 import thunk from "redux-thunk";
 
 //  reducer
-const songsReducer = (state = [], action) => {
+const songs = (state = [], action) => {
   switch (action.type) {
     case "GET_SONGS_SUCCESS":
       return action.songs;
@@ -15,7 +15,7 @@ const songsReducer = (state = [], action) => {
 
 // state
 const reducers = combineReducers({
-  songs: songsReducer,
+  songs: songs
 });
 const middleware = [thunk];
 

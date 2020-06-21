@@ -45,3 +45,19 @@ const songs = [
         <p>credits: {song.credits}</p>
         <p>structure: {song.structure}</p>
       </div>
+
+
+      #From app
+
+        constructor(props) {
+        super(props);
+
+        this.state = {
+        songs: []
+        }   
+    }
+        #response
+          .then((songs) => this.setState({ songs }));
+
+
+songs={this.state.songs}
