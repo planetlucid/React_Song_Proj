@@ -14,6 +14,8 @@ const SongCard = ({song})=>(
         <p>bpm: {song.bpm}</p>
         <p>credits: {song.credits}</p>
         <p>structure: {song.structure}</p>
+        <button className="Button" type="submit">Delete </button>
+        <button className="Button" type="submit">Edit </button>
     </div>
 )
 

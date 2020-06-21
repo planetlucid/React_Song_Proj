@@ -1,23 +1,23 @@
 import React, { Component } from "react";
 import { connect } from "react-redux";
 
-import { updateSongFormData } from '../actions/songForm';
-import {createSong} from '../actions/songs';
+import { updateSongFormData } from "../actions/songForm";
+import { createSong } from "../actions/songs";
 
 class SongForm extends Component {
 
-  handleOnChange = event => {
-    const { title, value } = event.target;
+  handleOnChange = (event) => {
+    const { name, value } = event.target;
     const currentSongFormData = Object.assign({}, this.props.songFormData, {
-      [title]: value
-    })
-    this.props.updateSurfboardFormData(currentSongFormData)
-  }
+      [name]: value
+    });
+    this.props.updateSongFormData(currentSongFormData);
+  };
 
-  handleOnSubmit = event => {
-    event.preventDefault()
-    this.props.createSong(this.props.songFormData)
-  }
+  handleOnSubmit = (event) => {
+    event.preventDefault();
+    this.props.createSong(this.props.songFormData);
+  };
 
   render() {
     const {
@@ -34,6 +34,7 @@ class SongForm extends Component {
       credits,
       structure,
     } = this.props.songFormData;
+
     return (
       <div>
         Add The Ingredients of Your Favorite Songs.
@@ -49,18 +50,18 @@ class SongForm extends Component {
           </div>
 
           <div>
-              <label htmlFor="img_url">Image:</label>
-              <input 
-                type="text"
-                onChange={this.handleOnChange}
-                title="img_url"
-                value={img_url}
-              />
+            <label htmlFor="img_url">Image:</label>
+            <input
+              type="text"
+              onChange={this.handleOnChange}
+              title="img_url"
+              value={img_url}
+            />
           </div>
 
           <div>
             <label htmlFor="artist">Artist:</label>
-            <input 
+            <input
               type="text"
               onChange={this.handleOnChange}
               name="artist"
@@ -70,7 +71,7 @@ class SongForm extends Component {
 
           <div>
             <label htmlFor="album">album:</label>
-            <input 
+            <input
               type="text"
               onChange={this.handleOnChange}
               name="album"
@@ -80,7 +81,7 @@ class SongForm extends Component {
 
           <div>
             <label htmlFor="genre">genre:</label>
-            <input 
+            <input
               type="text"
               onChange={this.handleOnChange}
               name="genre"
@@ -90,7 +91,7 @@ class SongForm extends Component {
 
           <div>
             <label htmlFor="key">Key:</label>
-            <input 
+            <input
               type="text"
               onChange={this.handleOnChange}
               name="key"
@@ -100,7 +101,7 @@ class SongForm extends Component {
 
           <div>
             <label htmlFor="mode">Mode:</label>
-            <input 
+            <input
               type="text"
               onChange={this.handleOnChange}
               name="mode"
@@ -110,7 +111,7 @@ class SongForm extends Component {
 
           <div>
             <label htmlFor="sales">Sales:</label>
-            <input 
+            <input
               type="number"
               onChange={this.handleOnChange}
               name="sales"
@@ -120,7 +121,7 @@ class SongForm extends Component {
 
           <div>
             <label htmlFor="streams">Streams:</label>
-            <input 
+            <input
               type="number"
               onChange={this.handleOnChange}
               name="streams"
@@ -130,7 +131,7 @@ class SongForm extends Component {
 
           <div>
             <label htmlFor="bpm">Bpm:</label>
-            <input 
+            <input
               type="number"
               onChange={this.handleOnChange}
               name="bpm"
@@ -140,7 +141,7 @@ class SongForm extends Component {
 
           <div>
             <label htmlFor="credits">Credits:</label>
-            <input 
+            <input
               type="text"
               onChange={this.handleOnChange}
               name="credits"
@@ -150,17 +151,16 @@ class SongForm extends Component {
 
           <div>
             <label htmlFor="structure">Structure:</label>
-            <input 
+            <input
               type="text"
               onChange={this.handleOnChange}
               name="structure"
               value={structure}
             />
           </div>
-          
+
           <button type="submit">Add Song</button>
         </form>
-        
       </div>
     );
   }
@@ -174,5 +174,5 @@ const mapStateToProps = (state) => {
 
 export default connect(mapStateToProps, {
   updateSongFormData,
-  createSong
+  createSong,
 })(SongForm);

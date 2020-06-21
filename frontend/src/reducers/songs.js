@@ -3,7 +3,7 @@ export default (state = [], action) => {
       case "GET_SONGS_SUCCESS":
         return action.songs;
 
-        case 'CREATE_SURFBOARD_SUCCESS':
+        case 'CREATE_SONG_SUCCESS':
             return state.concat(action.song);
 
       default:

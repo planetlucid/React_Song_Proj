@@ -8,6 +8,6 @@ export const updateSongFormData = songFormData => {
   
   export const resetSongForm = () => {
     return {
-      type: 'RESET_SURFBOARD_FORM'
+      type: 'RESET_SONG_FORM'
     }
   }

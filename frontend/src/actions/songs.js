@@ -1,4 +1,6 @@
+import {resetSongForm} from './songForm'
 const API_URL = process.env.REACT_APP_API_URL
+
 
 // Action Creators
 const setSongs = songs => {
@@ -7,6 +9,13 @@ const setSongs = songs => {
         songs
     }
 }
+
+const addSong = song => {
+  return {
+    type: 'CREATE_SONG_SUCCESS',
+    song
+  }
+} 
 
 // Async
 export const getSongs = () => {
@@ -29,8 +38,8 @@ export const createSong = song => {
       })
         .then(response => response.json())
         .then(song => {
-        //   dispatch(addSong(song))
-        //   dispatch(resetSongForm())
+          dispatch(addSong(song))
+          dispatch(resetSongForm())
         })
         .catch(error => console.log(error))
     }
