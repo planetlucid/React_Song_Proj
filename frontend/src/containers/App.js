@@ -5,6 +5,7 @@ import Songs from "./Songs";
 import NavBar from '../components/NavBar.js'
 import Footer from "../components/Footer.js";
 import Header from "../components/Header.js";
+import About from "../components/About.js";
 import SongForm from "./SongForm.js";
 
 import "./App.css";
@@ -36,6 +37,7 @@ class App extends Component {
         
             <Route exact path= '/songs' component={Songs}/>  
             <Route exact path='/songs/new' component={SongForm} />
+            <Route exact path='/about' component={About} />
           <Songs />
 
           </Switch>

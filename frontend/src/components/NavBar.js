@@ -4,18 +4,19 @@ import { NavLink } from "react-router-dom";
 const NavBar = () => {
   return (
     <div className="NavBar">
+      <NavLink exact activeClass to="/">
+        {" "}
+        Home |{" "}
+      </NavLink>
       <NavLink exact activeClass to="/songs/new">
         {" "}
         Add Song |
       </NavLink>
-      <NavLink exact activeClass to="/songs">
+      <NavLink exact activeClass to="/about">
         {" "}
-        View Songs |
+        About
       </NavLink>
-      <NavLink exact activeClass to="/">
-        {" "}
-        Home{" "}
-      </NavLink>
+
       <br></br>
       <br></br>
     </div>
