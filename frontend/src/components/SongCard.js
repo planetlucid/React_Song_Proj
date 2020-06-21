@@ -2,7 +2,7 @@ import React from 'react'
 
 const SongCard = ({song})=>(
     <div key={song.id} className="SongCard">
-        <h2 class="SongTitle">{song.title}</h2>
+        <h2 className="SongTitle">{song.title}</h2>
         <img className="SongImage" src={song.image_url} alt={song.name} />
         <p>artist: {song.artist}</p>
         <p>album: {song.album}</p>
