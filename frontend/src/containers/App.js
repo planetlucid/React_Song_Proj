@@ -1,31 +1,48 @@
 import React, { Component } from "react";
+import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 
 import Songs from "./Songs";
+import NavBar from '../components/NavBar.js'
+import Footer from "../components/Footer.js";
+import Header from "../components/Header.js";
+import SongForm from "./SongForm.js";
+
 import "./App.css";
 
-const API_URL = process.env.REACT_APP_API_URL
 
-  class App extends Component {
-  
-    constructor(props) {
-        super(props);
 
-        this.state = {
-        songs: []
-        }   
-    }
+const API_URL = process.env.REACT_APP_API_URL;
+
+class App extends Component {
+  constructor(props) {
+    super(props);
+
+    this.state = {
+      songs: [],
+    };
+  }
 
   componentDidMount() {
-    fetch(`${API_URL}/songs`)
-      .then((response) => response.json())
+    fetch(`${API_URL}/songs`).then((response) => response.json());
   }
 
   render() {
-     return (
-      <div className="App">
-        <Songs />
-      </div>
-    );
+    return (
+      <Router>
+        <div className="App">
+        <Header />
+        <NavBar />
+        <Switch>
+        
+            <Route exact path= '/songs' component={Songs}/>  
+            <Route exact path='/songs/new' component={SongForm} />
+          <Songs />
+
+          </Switch>
+          <Footer />
+        </div>
+      </Router>
+    )
   }
 }
 

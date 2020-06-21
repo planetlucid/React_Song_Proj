@@ -1,6 +1,6 @@
 const initialState = {
   title: "",
-  img_url: "https://bit.ly/3djlYb4",
+  img_url: "",
   artist: "",
   album: "",
   genre: "",
@@ -10,7 +10,7 @@ const initialState = {
   streams: 0,
   bpm: 0,
   credits: "",
-  structure: ""
+  structure: "",
 };
 
 export default (state = initialState, action) => {
