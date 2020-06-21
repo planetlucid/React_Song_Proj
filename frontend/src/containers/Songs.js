@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import { connect } from "react-redux";
+import {getSongs} from '../actions/songs'
 import SongCard from "../components/SongCard";
 import SongForm from "./SongForm";
 import "./Songs.css";
@@ -7,10 +8,7 @@ import "./Songs.css";
 class Songs extends Component {
 
   componentDidMount() {
-    this.props.dispatch({
-    type: 'GET_SONGS_SUCCESS',
-    songs: [{ title:"test"}]
-    });
+      this.props.getSongs()
   }
 
   render() {
@@ -18,9 +16,7 @@ class Songs extends Component {
       <div className="SongsContainer">
         <h1>Songs</h1>
         <SongForm />
-        {this.props.songs.map((song) => (
-          <SongCard key={song.id} song={song} />
-        ))}
+        {this.props.songs.map(song => <SongCard key={song.id} song={song} />)}
       </div>
     );
   }
@@ -32,4 +28,4 @@ const mapStateToProps = (state) => {
   };
 };
 
-export default connect(mapStateToProps)(Songs);
+export default connect(mapStateToProps, {getSongs})(Songs);
