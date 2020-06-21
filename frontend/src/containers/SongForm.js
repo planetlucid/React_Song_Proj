@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import { connect } from "react-redux";
 
 import { updateSongFormData } from '../actions/songForm';
+import {createSong} from '../actions/songs';
 
 class SongForm extends Component {
 
@@ -11,6 +12,11 @@ class SongForm extends Component {
       [title]: value
     })
     this.props.updateSurfboardFormData(currentSongFormData)
+  }
+
+  handleOnSubmit = event => {
+    event.preventDefault()
+    this.props.createSong(this.props.songFormData)
   }
 
   render() {
@@ -166,4 +172,7 @@ const mapStateToProps = (state) => {
   };
 };
 
-export default connect(mapStateToProps, {updateSongFormData})(SongForm);
+export default connect(mapStateToProps, {
+  updateSongFormData,
+  createSong
+})(SongForm);

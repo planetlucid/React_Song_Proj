@@ -18,3 +18,20 @@ export const getSongs = () => {
     }
 }
 
+export const createSong = song => {
+    return dispatch => {
+      return fetch(`${API_URL}/songs`, {
+        method: "POST",
+        headers: {
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify({ song: song })
+      })
+        .then(response => response.json())
+        .then(song => {
+        //   dispatch(addSong(song))
+        //   dispatch(resetSongForm())
+        })
+        .catch(error => console.log(error))
+    }
+  }

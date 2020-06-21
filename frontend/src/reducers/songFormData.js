@@ -1,23 +1,27 @@
-export default (state = {
-    title:"",
-    img_url:"https://bit.ly/3djlYb4",
-    artist: "",
-    album: "",
-    genre:"",
-    key:"",
-    mode: "",
-    sales: 0,
-    streams:0,
-    bpm: 0,
-    credits: "",
-    structure:""
-    }, action ) => {
+const initialState = {
+  title: "",
+  img_url: "https://bit.ly/3djlYb4",
+  artist: "",
+  album: "",
+  genre: "",
+  key: "",
+  mode: "",
+  sales: 0,
+  streams: 0,
+  bpm: 0,
+  credits: "",
+  structure: ""
+};
 
-    switch(action.type) {
-        case 'UPDATED_DATA':
-            return action.songFormData
+export default (state = initialState, action) => {
+  switch (action.type) {
+    case "UPDATED_DATA":
+      return action.songFormData;
 
-        default:
-            return state;
-        }
-    }
+    case "RESET_SONG_FORM":
+      return initialState;
+
+    default:
+      return state;
+  }
+};
