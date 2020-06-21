@@ -3,6 +3,8 @@ import React, { Component } from "react";
 import Songs from "./Songs";
 import "./App.css";
 
+const API_URL = process.env.REACT_APP_API_URL
+
 class App extends Component {
   constructor(props) {
     super(props);
@@ -13,7 +15,7 @@ class App extends Component {
   }
 
   componentDidMount() {
-    fetch("http://localhost:3001/api/songs")
+    fetch(`${API_URL}/songs`)
       .then((response) => response.json())
       .then((songs) => this.setState({ songs }));
   }
