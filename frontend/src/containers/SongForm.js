@@ -1,7 +1,18 @@
 import React, { Component } from "react";
 import { connect } from "react-redux";
 
+import { updateSongFormData } from '../actions/songForm';
+
 class SongForm extends Component {
+
+  handleOnChange = event => {
+    const { title, value } = event.target;
+    const currentSongFormData = Object.assign({}, this.props.songFormData, {
+      [title]: value
+    })
+    this.props.updateSurfboardFormData(currentSongFormData)
+  }
+
   render() {
     const {
       title,
@@ -155,4 +166,4 @@ const mapStateToProps = (state) => {
   };
 };
 
-export default connect(mapStateToProps)(SongForm);
+export default connect(mapStateToProps, {updateSongFormData})(SongForm);
