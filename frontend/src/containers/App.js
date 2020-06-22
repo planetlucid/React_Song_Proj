@@ -31,19 +31,25 @@ class App extends Component {
     return (
       <Router>
         <div className="App">
+        <div className="TopNav">
         <Header />
         <NavBar />
+        </div>
+        <Footer />
         <Switch>
         
             <Route exact path= '/songs' component={Songs}/>  
-            <Route exact path='/songs/new' component={SongForm} />
-            <Route exact path='/about' component={About} />
+            <Route exact path= '/songs/new' component={SongForm} />
+            <Route exact path= '/about' component={About} />
+            
           <Songs />
-
+          
           </Switch>
-          <Footer />
+          
         </div>
+        
       </Router>
+      
     )
   }
 }

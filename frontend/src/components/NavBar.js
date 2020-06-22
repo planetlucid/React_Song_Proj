@@ -6,11 +6,11 @@ const NavBar = () => {
     <div className="NavBar">
       <NavLink exact activeClass to="/">
         {" "}
-        Home |{" "}
+        Home{" "}
       </NavLink>
       <NavLink exact activeClass to="/songs/new">
         {" "}
-        Add Song |
+        Add Song
       </NavLink>
       <NavLink exact activeClass to="/about">
         {" "}

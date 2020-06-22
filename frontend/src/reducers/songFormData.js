@@ -1,6 +1,6 @@
 const initialState = {
   title: "",
-  img_url: "",
+  img_url: "type url",
   artist: "",
   album: "",
   genre: "",

@@ -5,11 +5,10 @@ import { updateSongFormData } from "../actions/songForm";
 import { createSong } from "../actions/songs";
 
 class SongForm extends Component {
-
   handleOnChange = (event) => {
     const { name, value } = event.target;
     const currentSongFormData = Object.assign({}, this.props.songFormData, {
-      [name]: value
+      [name]: value,
     });
     this.props.updateSongFormData(currentSongFormData);
   };
@@ -36,8 +35,8 @@ class SongForm extends Component {
     } = this.props.songFormData;
 
     return (
-      <div>
-        Add The Ingredients of Your Favorite Songs.
+      <div className="SongForm">
+        <h4 className="FormText">Add The Ingredients of Your Favorite Songs.</h4>
         <form onSubmit={this.handleOnSubmit}>
           <div>
             <label htmlFor="title">Title:</label>
@@ -45,7 +44,7 @@ class SongForm extends Component {
               type="text"
               onChange={this.handleOnChange}
               title="title"
-              value={title}
+              defaultValue="Hello!"
             />
           </div>
 
@@ -55,7 +54,7 @@ class SongForm extends Component {
               type="text"
               onChange={this.handleOnChange}
               title="img_url"
-              value={img_url}
+              defaultValue="Hello!"
             />
           </div>
 
@@ -159,7 +158,7 @@ class SongForm extends Component {
             />
           </div>
 
-          <button type="submit">Add Song</button>
+          <button className="AddSong" type="submit">Add Song</button>
         </form>
       </div>
     );
