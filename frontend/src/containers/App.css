@@ -70,7 +70,7 @@ a {
   background-color: darkgray;
 }
 
- .SongForm {
+.SongForm {
   background-color: darkgrey;
   margin-top: 120px;
 }
@@ -86,18 +86,17 @@ a {
 
 .FooterText {
   color: rgb(65, 59, 59);
-} */
-
- .App-link {
+}
+*/ .App-link {
   color: #61dafb;
 }
 
-.About{
+.About {
   position: relative;
   top: 120px;
   background-color: rgb(222, 222, 222);
   color: blue;
-} 
+}
 
 @keyframes App-logo-spin {
   from {

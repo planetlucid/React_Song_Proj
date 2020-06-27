@@ -36,15 +36,17 @@ class SongForm extends Component {
 
     return (
       <div className="SongForm">
-        <h4 className="FormText">Add The Ingredients of Your Favorite Songs.</h4>
+        <h1 className="FormText">
+          Add The Ingredients of Your Favorite Songs.
+        </h1>
         <form onSubmit={this.handleOnSubmit}>
           <div>
             <label htmlFor="title">Title:</label>
             <input
               type="text"
               onChange={this.handleOnChange}
-              title="title"
-              defaultValue="Hello!"
+              name="title"
+              value={title}
             />
           </div>
 
@@ -53,8 +55,8 @@ class SongForm extends Component {
             <input
               type="text"
               onChange={this.handleOnChange}
-              title="img_url"
-              defaultValue="Hello!"
+              name="img_url"
+              value={img_url}
             />
           </div>
 
@@ -158,7 +160,9 @@ class SongForm extends Component {
             />
           </div>
 
-          <button className="AddSong" type="submit">Add Song</button>
+          <button className="AddSong" type="submit">
+            Add Song
+          </button>
         </form>
       </div>
     );
