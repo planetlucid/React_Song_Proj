@@ -21,7 +21,7 @@ class SongForm extends Component {
   render() {
     const {
       title,
-      img_url,
+      image_url,
       artist,
       album,
       genre,
@@ -51,12 +51,12 @@ class SongForm extends Component {
           </div>
 
           <div>
-            <label htmlFor="img_url">Image:</label>
+            <label htmlFor="image_url">Image:</label>
             <input
               type="text"
               onChange={this.handleOnChange}
-              name="img_url"
-              value={img_url}
+              name="image_url"
+              value={image_url}
             />
           </div>
 
