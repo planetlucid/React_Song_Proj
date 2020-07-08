@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import { connect } from "react-redux";
 import {getSongs} from '../actions/songs'
 import SongCard from "../components/SongCard";
-import SongForm from "./SongForm";
+// import SongForm from "./SongForm";
 import "./Songs.css";
 
 class Songs extends Component {
@@ -22,10 +22,12 @@ class Songs extends Component {
   }
 }
 
+//gets the redux state as a parameter and returns an object
 const mapStateToProps = (state) => {
   return {
     songs: state.songs,
   };
 };
 
+//action creator is getsongs that is being dispatched with mapDispatchtoProps
 export default connect(mapStateToProps, {getSongs})(Songs);

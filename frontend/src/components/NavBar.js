@@ -4,15 +4,15 @@ import { NavLink } from "react-router-dom";
 const NavBar = () => {
   return (
     <div className="NavBar">
-      <NavLink exact activeClass to="/">
+      <NavLink exact activeclass to="/">
         {" "}
         Home{" "}
       </NavLink>
-      <NavLink exact activeClass to="/songs/new">
+      <NavLink exact activeclass to="/songs/new">
         {" "}
         Add Song
       </NavLink>
-      <NavLink exact activeClass to="/about">
+      <NavLink exact activeclass to="/about">
         {" "}
         About
       </NavLink>

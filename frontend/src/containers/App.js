@@ -18,8 +18,11 @@ class App extends Component {
 
     this.state = {
       songs: [],
+      // count: 0,
     };
   }
+
+
 
   componentDidMount() {
     fetch(`${API_URL}/songs`).then((response) => response.json());
@@ -32,13 +35,14 @@ class App extends Component {
           <div className="TopNav">
             <Header />
             <NavBar />
+            {/* <button onClick={this.theCounter}>Click Me!</button> */}
+            {this.state.count}
           </div>
           <Footer />
           <Switch>
             <Route exact path="/songs" component={Songs} />
             <Route exact path="/songs/new" component={SongForm} />
             <Route exact path="/about" component={About} />
-
             <Songs />
           </Switch>
         </div>
