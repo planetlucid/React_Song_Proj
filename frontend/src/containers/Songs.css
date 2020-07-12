@@ -6,14 +6,17 @@
 .SongCard {
   float: left;
   margin: 1.5%;
-  background: whitesmoke;
+  background: rgba(26, 21, 21, 0.351);
   height: auto;
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
   transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+  position: relative;
+  overflow: hidden;
 }
 
 .TitleContainer {
   display: flex;
+  justify-content: space-evenly;
   padding: 20px;
 }
 
@@ -25,7 +28,7 @@
   justify-content: space-evenly;
   font-size: 25px;
   color: antiquewhite;
-  background-color: rgba(0, 0, 0, 0.358);
+  /* background-color: rgba(0, 0, 0, 0.358); */
 }
 
 .ButtonContainer {
@@ -61,21 +64,21 @@
   display: inline-block;
 } */
 
-
-.Blur{
-}
-@supports (-webkit-backdrop-filter: none) or (backdrop-filter: none) {
 .WrapperBgImage {
   background-color: rgb(0, 135, 165);
-  position: relative;
   background-size: cover;
   background-blend-mode: lighten;
-  -webkit-backdrop-filter: blur(20px);
-  backdrop-filter: blur(20px);
-  background-repeat: none;
-}
+  background-repeat: no-repeat;
+  filter: blur(8px);
+  -webkit-filter: blur(8px);
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: -1;
 }
 
 .SongTitle {
-  color: rgb(1, 107, 126);
+  color: rgb(207, 240, 245);
 }
