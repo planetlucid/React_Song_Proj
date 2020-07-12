@@ -61,3 +61,8 @@ const songs = [
 
 
 songs={this.state.songs}
+
+
+///
+
+styles={{ backgroundImage:`url(${song.image_url})`}}
