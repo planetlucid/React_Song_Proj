@@ -1,4 +1,5 @@
 import React from "react";
+import SegmentAdder from "./SegmentAdder.js";
 
 const SongCard = ({ song }) => (
   <div key={song.id} className="SongCard">
@@ -42,6 +43,9 @@ const SongCard = ({ song }) => (
     </div>
     <div className="SegmentsContainer">
       <p>structure: {song.structure}</p>
+    </div>
+    <div className="SegmentAdder">
+      <SegmentAdder />
     </div>
     <div className="ButtonContainer">
       <button className="Button" type="submit">

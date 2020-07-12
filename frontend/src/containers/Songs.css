@@ -28,7 +28,14 @@
   justify-content: space-evenly;
   font-size: 25px;
   color: antiquewhite;
-  /* background-color: rgba(0, 0, 0, 0.358); */
+}
+
+.SegmentAdder {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 20px;
+  align-content: stretch;
+  justify-content: space-evenly;
 }
 
 .ButtonContainer {
