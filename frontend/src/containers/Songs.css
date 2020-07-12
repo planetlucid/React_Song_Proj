@@ -38,6 +38,12 @@
   justify-content: space-evenly;
 }
 
+span.Element {
+  font-size: 18px;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+
 .ButtonContainer {
   display: flex;
   flex-wrap: wrap;

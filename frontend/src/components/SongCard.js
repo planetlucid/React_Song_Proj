@@ -10,39 +10,39 @@ const SongCard = ({ song }) => (
     <img className="SongImage" src={song.image_url} alt={song.name} />
     <div className="ElementsContainer">
       <p>
-        album: <br></br>
+        <span className="Element">album:</span> <br></br>
         {song.album}
       </p>
       <p>
-        genre: <br></br>
+      <span className="Element">genre:</span> <br></br>
         {song.genre}
       </p>
       <p>
-        key: <br></br>
+      <span className="Element">key:</span> <br></br>
         {song.key}
       </p>
       <p>
-        mode: <br></br>
+      <span className="Element">mode:</span> <br></br>
         {song.mode}
       </p>
       <p>
-        sales: <br></br>
+      <span className="Element">sales:</span> <br></br>
         {song.sales}
       </p>
       <p>
-        streams: <br></br>
+      <span className="Element">streams:</span> <br></br>
         {song.streams}
       </p>
       <p>
-        bpm: <br></br>
+      <span className="Element">bpm:</span> <br></br>
         {song.bpm}
       </p>
     </div>
     <div className="SongCredits">
-      <p>credits: {song.credits}</p>
+      <p><span className="Element">credits:</span> {song.credits}</p>
     </div>
     <div className="SegmentsContainer">
-      <p>structure: {song.structure}</p>
+      <p><span className="Element">structure:</span> {song.structure}</p>
     </div>
     <div className="SegmentAdder">
       <SegmentAdder />
